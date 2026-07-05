@@ -1,18 +1,19 @@
+using EasyDay;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
+using System.Security.AccessControl;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.OleDb;
-using System.Security.AccessControl;
 
 namespace test1
 {
-    public partial class Form1 : Form
+    public partial class frmSignUp : Form
     {
-        public Form1()
+        public frmSignUp()
         {
             InitializeComponent();
         }
@@ -27,7 +28,7 @@ namespace test1
                 MessageBox.Show("Username and Password fields are empty!", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUsername.Focus();
             }
-            
+
             else if (txtPassword.Text == txtConfirmPassword.Text)
             {
                 bool hasNumber = txtPassword.Text.Any(char.IsDigit);
@@ -35,7 +36,7 @@ namespace test1
 
                 if (txtPassword.Text.Length < 8 || !hasNumber || !hasSymbol)
                 {
-                    MessageBox.Show("Password must be at least 8 characters and above including at least one number and one symbol", "Invalid Password",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Password must be at least 8 characters and above including at least one number and one symbol", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     txtPassword.Text = "";
                     txtConfirmPassword.Text = "";
@@ -94,7 +95,7 @@ namespace test1
             }
             else
             {
-                MessageBox.Show("Passwords do not match!","Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Passwords do not match!", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPassword.Clear();
                 txtConfirmPassword.Clear();
                 txtPassword.Focus();
@@ -117,8 +118,12 @@ namespace test1
 
         private void lblSignIn_Click(object sender, EventArgs e)
         {
-            // ke page sign in
-
+            new frmSignIn().Show();
+            this.Hide();
         }
-    }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }    }
 }
