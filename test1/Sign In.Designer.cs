@@ -67,7 +67,7 @@
             guna2Panel1.Controls.Add(chkShowPassword);
             guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.FillColor = Color.FromArgb(224, 224, 224);
-            guna2Panel1.Location = new Point(407, 24);
+            guna2Panel1.Location = new Point(402, 24);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new Size(375, 454);
@@ -206,7 +206,7 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges9;
             guna2PictureBox1.Image = Properties.Resources.easyday;
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(-6, -6);
+            guna2PictureBox1.Location = new Point(-15, -6);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2PictureBox1.Size = new Size(377, 484);
@@ -218,7 +218,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Comic Sans MS", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Navy;
-            label2.Location = new Point(96, 47);
+            label2.Location = new Point(87, 47);
             label2.Name = "label2";
             label2.Size = new Size(275, 96);
             label2.TabIndex = 26;
