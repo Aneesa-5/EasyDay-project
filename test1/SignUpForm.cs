@@ -10,9 +10,9 @@ using System.Security.AccessControl;
 
 namespace test1
 {
-    public partial class Form1 : Form
+    public partial class SignUpForm : Form
     {
-        public Form1()
+        public SignUpForm()
         {
             InitializeComponent();
         }
