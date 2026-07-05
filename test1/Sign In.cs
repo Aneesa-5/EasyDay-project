@@ -23,13 +23,26 @@ namespace EasyDay
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             con.Open();
-            string signIn = "SELECT * FROM tbl_users WHERE Username = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'";
+            string signIn = "SELECT * FROM tbl_users WHERE Username = ? and [Password] = ?";
             cmd = new OleDbCommand(signIn, con);
+            cmd.Parameters.AddWithValue("?", txtUsername.Text);
+            cmd.Parameters.AddWithValue("?", txtPassword.Text);
             OleDbDataReader dr = cmd.ExecuteReader();
 
             if (dr.Read())
             {
-                // next page
+                string role = dr["Role"].ToString();
+
+                con.Close();
+
+                if (role == "Supervisor")
+                {
+                    // page supervisor
+                }
+                else if (role == "Worker")
+                {
+                    // page worker
+                }
                 this.Hide();
             }
             else
