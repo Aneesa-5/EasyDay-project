@@ -144,6 +144,7 @@
             radWorker.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             radWorker.CheckedState.InnerColor = Color.White;
             radWorker.CheckedState.InnerOffset = -4;
+            radWorker.Cursor = Cursors.Hand;
             radWorker.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             radWorker.Location = new Point(214, 272);
             radWorker.Name = "radWorker";
@@ -165,6 +166,7 @@
             radSupervisor.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             radSupervisor.CheckedState.InnerColor = Color.White;
             radSupervisor.CheckedState.InnerOffset = -4;
+            radSupervisor.Cursor = Cursors.Hand;
             radSupervisor.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             radSupervisor.Location = new Point(74, 272);
             radSupervisor.Name = "radSupervisor";

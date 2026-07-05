@@ -59,6 +59,23 @@ namespace test1
                 }
 
                 con.Open();
+
+                string checkUser = "SELECT COUNT(*) FROM tbl_users WHERE Username = ?";
+                cmd = new OleDbCommand(checkUser, con);
+                cmd.Parameters.AddWithValue("?", txtUsername.Text);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                if (count > 0)
+                {
+                    con.Close();
+
+                    MessageBox.Show("Username already exists. Please choose another username.", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUsername.Clear();
+                    txtUsername.Focus();
+                    return;
+                }
+
                 string register = "INSERT INTO tbl_users (Username, [Password], Role) VALUES (?, ?, ?)";
                 cmd = new OleDbCommand(register, con);
                 cmd.Parameters.AddWithValue("?", txtUsername.Text);
