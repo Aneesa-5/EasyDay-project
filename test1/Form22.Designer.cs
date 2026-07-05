@@ -1,6 +1,6 @@
 ﻿namespace EasyDay_SignUp
 {
-    partial class Form2
+    partial class Form22
     {
         /// <summary>
         /// Required designer variable.

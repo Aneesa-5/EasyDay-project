@@ -9,9 +9,9 @@ using test1;
 
 namespace EasyDay_SignUp
 {
-    public partial class Form3 : Form
+    public partial class Form33 : Form
     {
-        public Form3()
+        public Form33()
         {
             InitializeComponent();
         }
@@ -126,7 +126,7 @@ namespace EasyDay_SignUp
 
         private void btnMessageSupervisor_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
+            Form22 frm = new Form22();
             frm.ShowDialog();
         }
     }

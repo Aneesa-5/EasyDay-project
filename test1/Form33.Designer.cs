@@ -1,6 +1,6 @@
 ﻿namespace EasyDay_SignUp
 {
-    partial class Form3
+    partial class Form33
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form33));
             btnMessageSupervisor = new Button();
             pictureBox5 = new PictureBox();
             button4 = new Button();
