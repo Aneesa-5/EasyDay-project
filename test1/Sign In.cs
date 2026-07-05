@@ -32,6 +32,7 @@ namespace EasyDay
             if (dr.Read())
             {
                 string role = dr["Role"].ToString();
+
                 con.Close();
 
                 if (role == "Supervisor")
