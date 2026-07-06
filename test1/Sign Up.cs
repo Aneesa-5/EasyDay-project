@@ -73,6 +73,8 @@ namespace test1
 
                     MessageBox.Show("Username already exists. Please choose another username.", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtUsername.Clear();
+                    txtPassword.Clear();
+                    txtConfirmPassword.Clear();
                     txtUsername.Focus();
                     return;
                 }
@@ -83,6 +85,11 @@ namespace test1
                 cmd.Parameters.AddWithValue("?", txtPassword.Text);
                 cmd.Parameters.AddWithValue("?", role);
                 cmd.ExecuteNonQuery();
+
+                cmd.CommandText = "SELECT @@IDENTITY";
+                cmd.Parameters.Clear();
+                int newUserId = Convert.ToInt32(cmd.ExecuteScalar());
+
                 con.Close();
 
                 txtUsername.Text = "";
@@ -91,7 +98,7 @@ namespace test1
                 radSupervisor.Checked = false;
                 radWorker.Checked = false;
 
-                MessageBox.Show("Your Account has been Successfully Created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Your Account has been Successfully Created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

@@ -51,7 +51,6 @@
             guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             label2 = new Label();
-            label4 = new Label();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
@@ -225,21 +224,11 @@
             label2.TabIndex = 26;
             label2.Text = "WELCOME TO \r\n  EASYDAY\r\n";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(375, 22);
-            label4.Name = "label4";
-            label4.Size = new Size(50, 20);
-            label4.TabIndex = 27;
-            label4.Text = "label4";
-            // 
             // frmSignIn
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 500);
-            Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(guna2PictureBox1);
             Controls.Add(guna2Panel1);
@@ -267,6 +256,5 @@
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Label label4;
     }
 }
