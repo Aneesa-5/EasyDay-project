@@ -1,3 +1,4 @@
+using EasyDay_SignUp;
 namespace test1
 {
     internal static class Program

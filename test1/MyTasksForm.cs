@@ -19,7 +19,7 @@ namespace EasyDay_SignUp
         public MyTasksForm()
         {
             InitializeComponent();
-            _allTasks = TaskRepository.GetSampleTasks();
+            _allTasks = TaskRepository.GetAllTasks();
             RenderTaskCards();
 
         }
