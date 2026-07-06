@@ -69,5 +69,15 @@ namespace EasyDay_SignUp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2026_06_13_025427 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2026-06-13 025427", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
