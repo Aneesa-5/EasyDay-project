@@ -47,6 +47,7 @@ namespace EasyDay_SignUp
 
         private void button5_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(
             "☣️ CHEMICAL SAFETY ALERT ☣️\n\n" +
         "❌ Don't sniff it.\n" +
         "❌ Don't taste it.\n" +
@@ -63,6 +64,7 @@ namespace EasyDay_SignUp
 
         private void btnMachine_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(
             "⚙️ MACHINE SAFETY ⚙️\n\n" +
         "✔ Read the machine manual before use.\n\n" +
         "✔ Wear appropriate PPE.\n\n" +
