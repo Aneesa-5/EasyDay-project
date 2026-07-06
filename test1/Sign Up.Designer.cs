@@ -58,8 +58,8 @@
             txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             label2 = new Label();
-            guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             label4 = new Label();
+            guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
@@ -313,6 +313,18 @@
             label2.Size = new Size(100, 23);
             label2.TabIndex = 0;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            guna2Transition1.SetDecoration(label4, Guna.UI2.AnimatorNS.DecorationType.None);
+            label4.Font = new Font("Comic Sans MS", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Navy;
+            label4.Location = new Point(86, 47);
+            label4.Name = "label4";
+            label4.Size = new Size(275, 96);
+            label4.TabIndex = 27;
+            label4.Text = "WELCOME TO \r\n  EASYDAY\r\n";
+            // 
             // guna2Transition1
             // 
             guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
@@ -333,18 +345,6 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             guna2Transition1.DefaultAnimation = animation1;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            guna2Transition1.SetDecoration(label4, Guna.UI2.AnimatorNS.DecorationType.None);
-            label4.Font = new Font("Comic Sans MS", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Navy;
-            label4.Location = new Point(86, 47);
-            label4.Name = "label4";
-            label4.Size = new Size(275, 96);
-            label4.TabIndex = 27;
-            label4.Text = "WELCOME TO \r\n  EASYDAY\r\n";
             // 
             // frmSignUp
             // 
@@ -383,9 +383,9 @@
         private Guna.UI2.WinForms.Guna2Button btnSignUp;
         private Guna.UI2.WinForms.Guna2RadioButton radSupervisor;
         private Guna.UI2.WinForms.Guna2RadioButton radWorker;
-        private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Label label4;
+        private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
     }
 }

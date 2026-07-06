@@ -63,6 +63,16 @@ namespace EasyDay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap crown {
+            get {
+                object obj = ResourceManager.GetObject("crown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap easyday {
             get {
                 object obj = ResourceManager.GetObject("easyday", resourceCulture);
@@ -76,6 +86,16 @@ namespace EasyDay.Properties {
         internal static System.Drawing.Bitmap eyeeee {
             get {
                 object obj = ResourceManager.GetObject("eyeeee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap infiniti {
+            get {
+                object obj = ResourceManager.GetObject("infiniti", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

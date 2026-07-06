@@ -43,6 +43,10 @@ namespace EasyDay
                 {
                     // page worker
                 }
+                else if (role == "Admin")
+                {
+                    // page admin
+                }
                 this.Hide();
             }
             else
