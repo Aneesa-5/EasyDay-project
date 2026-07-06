@@ -21,6 +21,7 @@ namespace EasyDay_SignUp
             InitializeComponent();
             _allTasks = TaskRepository.GetAllTasks();
             RenderTaskCards();
+            SetupNavHandlers();
 
         }
         private void btnToDo_Click(object sender, EventArgs e)
@@ -105,5 +106,22 @@ namespace EasyDay_SignUp
                 RenderTaskCards();
             }
         }
+        private void SetupNavHandlers()
+        {
+            lblNavHome.Click += (s, e) => MessageBox.Show("Home screen coming soon");
+            lblNavTasks.Click += (s, e) => { /* already here, no action needed */ };
+            lblNavMessages.Click += (s, e) => MessageBox.Show("Messages coming soon");
+            lblNavProfile.Click += (s, e) =>
+            {
+                this.Hide();
+                new ProfileForm().Show();
+            };
+
+            lblNavHome.Cursor = Cursors.Hand;
+            lblNavTasks.Cursor = Cursors.Hand;
+            lblNavMessages.Cursor = Cursors.Hand;
+            lblNavProfile.Cursor = Cursors.Hand;
+        }
     }
+
 }

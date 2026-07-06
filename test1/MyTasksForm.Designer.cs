@@ -38,8 +38,14 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            navPanel = new Panel();
+            lblNavProfile = new Label();
+            lblNavMessages = new Label();
+            lblNavTasks = new Label();
+            lblNavHome = new Label();
             taskListPanel.SuspendLayout();
             panel2.SuspendLayout();
+            navPanel.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -90,7 +96,7 @@
             taskListPanel.Controls.Add(panel2);
             taskListPanel.Location = new Point(30, 120);
             taskListPanel.Name = "taskListPanel";
-            taskListPanel.Size = new Size(740, 320);
+            taskListPanel.Size = new Size(740, 270);
             taskListPanel.TabIndex = 4;
             // 
             // panel2
@@ -146,12 +152,72 @@
             label2.TabIndex = 0;
             label2.Text = "Packaging Line 2";
             // 
+            // navPanel
+            // 
+            navPanel.Controls.Add(lblNavProfile);
+            navPanel.Controls.Add(lblNavMessages);
+            navPanel.Controls.Add(lblNavTasks);
+            navPanel.Controls.Add(lblNavHome);
+            navPanel.Location = new Point(30, 396);
+            navPanel.Name = "navPanel";
+            navPanel.Size = new Size(750, 45);
+            navPanel.TabIndex = 6;
+            // 
+            // lblNavProfile
+            // 
+            lblNavProfile.AutoSize = true;
+            lblNavProfile.BackColor = Color.Blue;
+            lblNavProfile.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblNavProfile.ForeColor = Color.Snow;
+            lblNavProfile.Location = new Point(660, 15);
+            lblNavProfile.Name = "lblNavProfile";
+            lblNavProfile.Size = new Size(55, 20);
+            lblNavProfile.TabIndex = 3;
+            lblNavProfile.Text = "Profile";
+            // 
+            // lblNavMessages
+            // 
+            lblNavMessages.AutoSize = true;
+            lblNavMessages.BackColor = Color.Blue;
+            lblNavMessages.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblNavMessages.ForeColor = Color.Snow;
+            lblNavMessages.Location = new Point(460, 15);
+            lblNavMessages.Name = "lblNavMessages";
+            lblNavMessages.Size = new Size(77, 20);
+            lblNavMessages.TabIndex = 2;
+            lblNavMessages.Text = "Messages";
+            // 
+            // lblNavTasks
+            // 
+            lblNavTasks.AutoSize = true;
+            lblNavTasks.BackColor = Color.Blue;
+            lblNavTasks.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblNavTasks.ForeColor = Color.Snow;
+            lblNavTasks.Location = new Point(260, 15);
+            lblNavTasks.Name = "lblNavTasks";
+            lblNavTasks.Size = new Size(47, 20);
+            lblNavTasks.TabIndex = 1;
+            lblNavTasks.Text = "Tasks";
+            // 
+            // lblNavHome
+            // 
+            lblNavHome.AutoSize = true;
+            lblNavHome.BackColor = Color.Blue;
+            lblNavHome.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblNavHome.ForeColor = Color.Snow;
+            lblNavHome.Location = new Point(60, 15);
+            lblNavHome.Name = "lblNavHome";
+            lblNavHome.Size = new Size(51, 20);
+            lblNavHome.TabIndex = 0;
+            lblNavHome.Text = "Home";
+            // 
             // MyTasksForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             ClientSize = new Size(782, 453);
+            Controls.Add(navPanel);
             Controls.Add(taskListPanel);
             Controls.Add(btnCompleted);
             Controls.Add(btnProgress);
@@ -163,6 +229,8 @@
             taskListPanel.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            navPanel.ResumeLayout(false);
+            navPanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -179,5 +247,10 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private Panel navPanel;
+        private Label lblNavProfile;
+        private Label lblNavMessages;
+        private Label lblNavTasks;
+        private Label lblNavHome;
     }
 }
