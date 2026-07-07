@@ -16,6 +16,7 @@ namespace EasyDay_SignUp
             InitializeComponent();
             MakeCircular(picProfile);
             SetupRowClickHandlers();
+            SetupNavHandlers();
         }
         private void MakeCircular(PictureBox pb)
         {
@@ -62,6 +63,22 @@ namespace EasyDay_SignUp
                 c.Cursor = Cursors.Hand;
                 c.Click += (s, e) => onClick();
             }
+        }
+        private void SetupNavHandlers()
+        {
+            lblNavHome.Click += (s, e) => MessageBox.Show("Home screen coming soon");
+            lblNavTasks.Click += (s, e) =>
+            {
+                this.Hide();
+                new MyTasksForm().Show();
+            };
+            lblNavMessages.Click += (s, e) => MessageBox.Show("Messages coming soon");
+            lblNavProfile.Click += (s, e) => { /* already here, no action needed */ };
+
+            lblNavHome.Cursor = Cursors.Hand;
+            lblNavTasks.Cursor = Cursors.Hand;
+            lblNavMessages.Cursor = Cursors.Hand;
+            lblNavProfile.Cursor = Cursors.Hand;
         }
     }
     
