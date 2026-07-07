@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
             picProfile = new PictureBox();
             lblName = new Label();
             lblRole = new Label();
             languageRow = new Panel();
-            lblLanguageTitle = new Label();
-            lblLanguageValue = new Label();
             lblLanguageArrow = new Label();
+            lblLanguageValue = new Label();
+            lblLanguageTitle = new Label();
             notificationsRow = new Panel();
             label1 = new Label();
             lblNotificationsTitle = new Label();
@@ -48,17 +49,24 @@
             label10 = new Label();
             label11 = new Label();
             lblLogoutTitle = new Label();
+            navPanel = new Panel();
+            lblNavProfile = new Label();
+            lblNavMessages = new Label();
+            lblNavTasks = new Label();
+            lblNavHome = new Label();
             ((System.ComponentModel.ISupportInitialize)picProfile).BeginInit();
             languageRow.SuspendLayout();
             notificationsRow.SuspendLayout();
             changePasswordRow.SuspendLayout();
             aboutRow.SuspendLayout();
             logoutRow.SuspendLayout();
+            navPanel.SuspendLayout();
             SuspendLayout();
             // 
             // picProfile
             // 
             picProfile.BorderStyle = BorderStyle.FixedSingle;
+            picProfile.Image = (Image)resources.GetObject("picProfile.Image");
             picProfile.Location = new Point(30, 20);
             picProfile.Name = "picProfile";
             picProfile.Size = new Size(80, 80);
@@ -92,28 +100,10 @@
             languageRow.Controls.Add(lblLanguageValue);
             languageRow.Controls.Add(lblLanguageTitle);
             languageRow.Cursor = Cursors.Hand;
-            languageRow.Location = new Point(30, 140);
+            languageRow.Location = new Point(30, 128);
             languageRow.Name = "languageRow";
             languageRow.Size = new Size(740, 45);
             languageRow.TabIndex = 3;
-            // 
-            // lblLanguageTitle
-            // 
-            lblLanguageTitle.AutoSize = true;
-            lblLanguageTitle.Location = new Point(10, 12);
-            lblLanguageTitle.Name = "lblLanguageTitle";
-            lblLanguageTitle.Size = new Size(74, 20);
-            lblLanguageTitle.TabIndex = 0;
-            lblLanguageTitle.Text = "Language";
-            // 
-            // lblLanguageValue
-            // 
-            lblLanguageValue.AutoSize = true;
-            lblLanguageValue.Location = new Point(550, 12);
-            lblLanguageValue.Name = "lblLanguageValue";
-            lblLanguageValue.Size = new Size(55, 20);
-            lblLanguageValue.TabIndex = 1;
-            lblLanguageValue.Text = "Bangla";
             // 
             // lblLanguageArrow
             // 
@@ -124,12 +114,30 @@
             lblLanguageArrow.TabIndex = 2;
             lblLanguageArrow.Text = ">";
             // 
+            // lblLanguageValue
+            // 
+            lblLanguageValue.AutoSize = true;
+            lblLanguageValue.Location = new Point(550, 12);
+            lblLanguageValue.Name = "lblLanguageValue";
+            lblLanguageValue.Size = new Size(55, 20);
+            lblLanguageValue.TabIndex = 1;
+            lblLanguageValue.Text = "Bangla";
+            // 
+            // lblLanguageTitle
+            // 
+            lblLanguageTitle.AutoSize = true;
+            lblLanguageTitle.Location = new Point(10, 12);
+            lblLanguageTitle.Name = "lblLanguageTitle";
+            lblLanguageTitle.Size = new Size(74, 20);
+            lblLanguageTitle.TabIndex = 0;
+            lblLanguageTitle.Text = "Language";
+            // 
             // notificationsRow
             // 
             notificationsRow.Controls.Add(label1);
             notificationsRow.Controls.Add(lblNotificationsTitle);
             notificationsRow.Cursor = Cursors.Hand;
-            notificationsRow.Location = new Point(30, 195);
+            notificationsRow.Location = new Point(30, 183);
             notificationsRow.Name = "notificationsRow";
             notificationsRow.Size = new Size(740, 45);
             notificationsRow.TabIndex = 4;
@@ -157,7 +165,7 @@
             changePasswordRow.Controls.Add(label4);
             changePasswordRow.Controls.Add(lblChangePasswordTitle);
             changePasswordRow.Cursor = Cursors.Hand;
-            changePasswordRow.Location = new Point(30, 250);
+            changePasswordRow.Location = new Point(30, 238);
             changePasswordRow.Name = "changePasswordRow";
             changePasswordRow.Size = new Size(740, 45);
             changePasswordRow.TabIndex = 4;
@@ -185,7 +193,7 @@
             aboutRow.Controls.Add(label7);
             aboutRow.Controls.Add(lblAboutTitle);
             aboutRow.Cursor = Cursors.Hand;
-            aboutRow.Location = new Point(30, 305);
+            aboutRow.Location = new Point(30, 293);
             aboutRow.Name = "aboutRow";
             aboutRow.Size = new Size(740, 45);
             aboutRow.TabIndex = 4;
@@ -214,7 +222,7 @@
             logoutRow.Controls.Add(label11);
             logoutRow.Controls.Add(lblLogoutTitle);
             logoutRow.Cursor = Cursors.Hand;
-            logoutRow.Location = new Point(31, 363);
+            logoutRow.Location = new Point(31, 351);
             logoutRow.Name = "logoutRow";
             logoutRow.Size = new Size(740, 45);
             logoutRow.TabIndex = 4;
@@ -247,12 +255,72 @@
             lblLogoutTitle.TabIndex = 0;
             lblLogoutTitle.Text = "Log Out";
             // 
+            // navPanel
+            // 
+            navPanel.Controls.Add(lblNavProfile);
+            navPanel.Controls.Add(lblNavMessages);
+            navPanel.Controls.Add(lblNavTasks);
+            navPanel.Controls.Add(lblNavHome);
+            navPanel.Location = new Point(21, 402);
+            navPanel.Name = "navPanel";
+            navPanel.Size = new Size(750, 45);
+            navPanel.TabIndex = 7;
+            // 
+            // lblNavProfile
+            // 
+            lblNavProfile.AutoSize = true;
+            lblNavProfile.BackColor = Color.Blue;
+            lblNavProfile.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblNavProfile.ForeColor = Color.Snow;
+            lblNavProfile.Location = new Point(660, 15);
+            lblNavProfile.Name = "lblNavProfile";
+            lblNavProfile.Size = new Size(55, 20);
+            lblNavProfile.TabIndex = 3;
+            lblNavProfile.Text = "Profile";
+            // 
+            // lblNavMessages
+            // 
+            lblNavMessages.AutoSize = true;
+            lblNavMessages.BackColor = Color.Blue;
+            lblNavMessages.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblNavMessages.ForeColor = Color.Snow;
+            lblNavMessages.Location = new Point(460, 15);
+            lblNavMessages.Name = "lblNavMessages";
+            lblNavMessages.Size = new Size(77, 20);
+            lblNavMessages.TabIndex = 2;
+            lblNavMessages.Text = "Messages";
+            // 
+            // lblNavTasks
+            // 
+            lblNavTasks.AutoSize = true;
+            lblNavTasks.BackColor = Color.Blue;
+            lblNavTasks.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblNavTasks.ForeColor = Color.Snow;
+            lblNavTasks.Location = new Point(260, 15);
+            lblNavTasks.Name = "lblNavTasks";
+            lblNavTasks.Size = new Size(47, 20);
+            lblNavTasks.TabIndex = 1;
+            lblNavTasks.Text = "Tasks";
+            // 
+            // lblNavHome
+            // 
+            lblNavHome.AutoSize = true;
+            lblNavHome.BackColor = Color.Blue;
+            lblNavHome.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblNavHome.ForeColor = Color.Snow;
+            lblNavHome.Location = new Point(60, 15);
+            lblNavHome.Name = "lblNavHome";
+            lblNavHome.Size = new Size(51, 20);
+            lblNavHome.TabIndex = 0;
+            lblNavHome.Text = "Home";
+            // 
             // ProfileForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             ClientSize = new Size(782, 453);
+            Controls.Add(navPanel);
             Controls.Add(changePasswordRow);
             Controls.Add(aboutRow);
             Controls.Add(logoutRow);
@@ -275,6 +343,8 @@
             aboutRow.PerformLayout();
             logoutRow.ResumeLayout(false);
             logoutRow.PerformLayout();
+            navPanel.ResumeLayout(false);
+            navPanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -301,5 +371,10 @@
         private Label label10;
         private Label label11;
         private Label lblLogoutTitle;
+        private Panel navPanel;
+        private Label lblNavProfile;
+        private Label lblNavMessages;
+        private Label lblNavTasks;
+        private Label lblNavHome;
     }
 }
