@@ -79,7 +79,7 @@ namespace test1
                     return;
                 }
 
-                string register = "INSERT INTO tbl_users (Username, [Password], Role) VALUES (?, ?, ?)";
+                string register = "INSERT INTO tbl_users (Username, UserPassword, Role) VALUES (?, ?, ?)";
                 cmd = new OleDbCommand(register, con);
                 cmd.Parameters.AddWithValue("?", txtUsername.Text);
                 cmd.Parameters.AddWithValue("?", txtPassword.Text);

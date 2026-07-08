@@ -23,7 +23,7 @@ namespace EasyDay
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             con.Open();
-            string signIn = "SELECT * FROM tbl_users WHERE Username = ? and [Password] = ?";
+            string signIn = "SELECT * FROM tbl_users WHERE Username = ? and UserPassword = ?";
             cmd = new OleDbCommand(signIn, con);
             cmd.Parameters.AddWithValue("?", txtUsername.Text);
             cmd.Parameters.AddWithValue("?", txtPassword.Text);
